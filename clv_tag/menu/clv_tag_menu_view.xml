@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+    <!-- Base/Base/Tags -->
+    <menuitem name="Tags" id="menu_base_base_tags"
+        parent="clv_base.menu_base_base"
+        groups="clv_base.group_tag_user"
+        sequence="10"
+        action="clv_tag.act_open_clv_tag_view"/>
+
+    </data>
+</openerp>
