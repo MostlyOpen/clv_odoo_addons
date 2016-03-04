@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_clv_annotation_annotation_user,clv_annotation,model_clv_annotation,clv_base.group_annotation_user,1,0,0,0
+access_clv_annotation_annotation_manager,clv_annotation,model_clv_annotation,clv_base.group_annotation_manager,1,1,1,0
+access_clv_annotation_smanager,clv_annotation,model_clv_annotation,clv_base.group_smanager,1,1,1,1
+
+access_clv_annotation_category_annotation_user,clv_annotation.category,model_clv_annotation_category,clv_base.group_annotation_user,1,0,0,0
+access_clv_annotation_category_annotation_category_manager,clv_annotation.category,model_clv_annotation_category,clv_base.group_annotation_category_manager,1,1,1,0
+access_clv_annotation_category_smanager,clv_annotation.category,model_clv_annotation_category,clv_base.group_smanager,1,1,1,1
