@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Base/Base/Residences -->
+        <menuitem name="Residences" id="menu_base_base_residences"
+            parent="clv_base.menu_base_base"
+            groups="clv_base.group_address_user"
+            sequence="60"
+            action="clv_residence.act_open_clv_residence_view"/>
+
+    </data>
+</openerp>
