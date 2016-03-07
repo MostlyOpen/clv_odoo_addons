@@ -20,7 +20,7 @@
 from openerp import models, fields
 
 
-class clv_address(models.Model):
+class Address(models.Model):
     _inherit = 'clv_address'
 
     is_residence = fields.Boolean('Is Residence',
