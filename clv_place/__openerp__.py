@@ -29,7 +29,7 @@
         'clv_base',
         'clv_tag',
         'clv_annotation',
-        # 'clv_address',
+        'clv_address',
         ],
     'data': [
         'security/clv_place_security.xml',
@@ -38,7 +38,7 @@
         'category/clv_place_category_view.xml',
         'tag/clv_tag_view.xml',
         'annotation/clv_annotation_view.xml',
-        # 'address/clv_address_view.xml',
+        'address/clv_address_view.xml',
         'menu/clv_place_menu_view.xml',
         ],
     'demo': [],

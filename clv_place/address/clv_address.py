@@ -17,8 +17,26 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
-import clv_place
-import category
-import tag
-import annotation
-import address
+from openerp import models, fields
+
+
+class Address(models.Model):
+    _inherit = 'clv_address'
+
+    place_ids = fields.One2many(
+        'clv_place',
+        'address_id',
+        'Places'
+        )
+
+
+class Place(models.Model):
+    _inherit = 'clv_place'
+
+    address_id = fields.Many2one('clv_address', 'Place Address')
+
+    def onchange_address_id(self, cr, uid, ids, address, context=None):
+        if address:
+            address = self.pool.get('clv_address').browse(cr, uid, address, context=context)
+            return {'value': {}}
+        return {'value': {}}

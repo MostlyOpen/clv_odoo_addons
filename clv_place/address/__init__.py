@@ -17,8 +17,4 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
-import clv_place
-import category
-import tag
-import annotation
-import address
+import clv_address
