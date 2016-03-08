@@ -24,3 +24,4 @@ import form
 import category
 import tag
 import annotation
+import active_component
