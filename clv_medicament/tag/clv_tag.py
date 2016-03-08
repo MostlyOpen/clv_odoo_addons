@@ -17,9 +17,28 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
-import clv_medicament_model
-import clv_medicament
-import uom
-import form
-import category
-import tag
+from openerp import models, fields
+
+
+class Tag(models.Model):
+    _inherit = 'clv_tag'
+
+    medicament_ids = fields.Many2many(
+        'clv_medicament',
+        'clv_medicament_tag_rel',
+        'tag_id',
+        'medicament_id',
+        'Medicaments'
+        )
+
+
+class Medicament(models.Model):
+    _inherit = 'clv_medicament'
+
+    tag_ids = fields.Many2many(
+        'clv_tag',
+        'clv_medicament_tag_rel',
+        'medicament_id',
+        'tag_id',
+        'Tags'
+        )

@@ -28,7 +28,7 @@
     'images': [],
     'depends': [
         'clv_base',
-        # 'clv_tag',
+        'clv_tag',
         # 'clv_annotation',
         ],
     'data': [
@@ -38,6 +38,7 @@
         'uom/clv_medicament_uom_view.xml',
         'form/clv_medicament_form_view.xml',
         'category/clv_medicament_category_view.xml',
+        'tag/clv_tag_view.xml',
         'menu/clv_medicament_menu_view.xml',
         ],
     'demo': [],
