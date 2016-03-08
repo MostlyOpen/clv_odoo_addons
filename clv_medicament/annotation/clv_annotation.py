@@ -17,38 +17,28 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
-{
-    'name': 'Medicament',
-    'summary': 'Medicament Module used in CLVsol Solutions.',
-    'version': '2.0',
-    'author': 'Carlos Eduardo Vercelino - CLVsol',
-    'category': 'Generic Modules/Others',
-    'license': 'AGPL-3',
-    'website': 'http://clvsol.com',
-    'images': [],
-    'depends': [
-        'clv_base',
-        'clv_tag',
+from openerp import models, fields
+
+
+class Medicament(models.Model):
+    _inherit = 'clv_medicament'
+
+    annotation_ids = fields.Many2many(
         'clv_annotation',
-        ],
-    'data': [
-        'security/clv_medicament_security.xml',
-        'security/ir.model.access.csv',
-        'clv_medicament_view.xml',
-        'uom/clv_medicament_uom_view.xml',
-        'form/clv_medicament_form_view.xml',
-        'category/clv_medicament_category_view.xml',
-        'tag/clv_tag_view.xml',
-        'annotation/clv_annotation_view.xml',
-        'menu/clv_medicament_menu_view.xml',
-        ],
-    'demo': [],
-    'test': [],
-    'init_xml': [],
-    'test': [],
-    'update_xml': [],
-    'installable': True,
-    'application': False,
-    'active': False,
-    'css': [],
-}
+        'clv_medicament_annotation_rel',
+        'medicament_id',
+        'annotation_id',
+        'Annotations'
+        )
+
+
+class Annotation(models.Model):
+    _inherit = 'clv_annotation'
+
+    medicament_ids = fields.Many2many(
+        'clv_medicament',
+        'clv_medicament_annotation_rel',
+        'annotation_id',
+        'medicament_id',
+        'Medicaments'
+        )

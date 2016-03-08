@@ -23,3 +23,4 @@ import uom
 import form
 import category
 import tag
+import annotation
