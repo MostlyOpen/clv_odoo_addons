@@ -17,6 +17,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
+import clv_medicament_model
 import clv_medicament
 import uom
 import form

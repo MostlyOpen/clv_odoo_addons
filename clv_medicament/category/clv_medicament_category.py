@@ -35,14 +35,6 @@ class MedicamentCategory(models.Model):
                             default=1)
     parent_left = fields.Integer('Left parent', select=True)
     parent_right = fields.Integer('Right parent', select=True)
-    medicament_ids = fields.Many2many(
-        'clv_medicament',
-        'clv_medicament_category_rel',
-        'category_id',
-        'medicament_id',
-        'Medicaments'
-        )
-
     _sql_constraints = [
         ('uniq_code', 'unique(code)', "Error! The Code must be unique!"),
         ]
@@ -100,7 +92,19 @@ class MedicamentCategory(models.Model):
             self.complete_name = self.name
 
 
-class clv_medicament(models.Model):
+class MedicamentCategory_2(models.Model):
+    _inherit = 'clv_medicament.category'
+
+    medicament_ids = fields.Many2many(
+        'clv_medicament',
+        'clv_medicament_category_rel',
+        'category_id',
+        'medicament_id',
+        'Medicaments'
+        )
+
+
+class Medicament(models.Model):
     _inherit = 'clv_medicament'
 
     category_ids = fields.Many2many(
