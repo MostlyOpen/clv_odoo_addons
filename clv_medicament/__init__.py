@@ -20,4 +20,4 @@
 import clv_medicament
 import uom
 import form
-# import category
+import category
