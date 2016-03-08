@@ -19,7 +19,7 @@
 
 import clv_person
 import category
-# import tag
+import tag
 # import annotation
 # import address
 # import person_address
