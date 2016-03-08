@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        
+        <record id="view_clv_address_form_person" model="ir.ui.view">
+            <field name="name">clv_address.form</field>
+            <field name="model">clv_address</field>
+            <field name="inherit_id" ref="clv_address.view_clv_address_form"/>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <page string="Settings" position="before">
+                    <page string="Persons">
+                        <group>
+                            <field name="person_ids" colspan="4" nolabel="1" />
+                        </group>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+        <record id="view_clv_person_form_address" model="ir.ui.view">
+            <field name="name">clv_person.form</field>
+            <field name="model">clv_person</field>
+            <field name="inherit_id" ref="view_clv_person_form"/>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <group string="Status" position="before">
+                    <group string="Contact Information">
+                        <field name="address_id" on_change="onchange_address_id(address_id)" context="{'show_address': 1}" options='{"always_reload": True, "highlight_first_line": True, "no_open": False, "no_create": True}'/>
+                        <field name="person_email" widget="email"/>
+                        <field name="person_phone"/>
+                        <field name="mobile_phone"/>
+                    </group>
+                </group>
+            </field>
+        </record>
+
+        <record id="view_clv_person_search_address" model="ir.ui.view">
+            <field name="name">clv_person.search</field>
+            <field name="model">clv_person</field>
+            <field name="inherit_id" ref="view_clv_person_search"/>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <group string="Group By..." position="inside">
+                    <filter string="Address" context="{'group_by': 'address_id'}"/>
+                </group>
+            </field>
+        </record>
+
+    </data>
+</openerp>
