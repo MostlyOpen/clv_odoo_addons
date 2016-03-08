@@ -19,6 +19,6 @@
 
 import clv_place
 import category
-# import tag
+import tag
 # import annotation
 # import address
