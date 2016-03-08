@@ -9,11 +9,11 @@
             sequence="10"
             action="clv_person.act_open_clv_person_view"/>
         <!-- Community/Community/Configuration/Person -->
-<!--         <menuitem name="Person Categories" id="menu_commutity_community_config_person_categories" 
+        <menuitem name="Person Categories" id="menu_commutity_community_config_person_categories" 
             parent="clv_base.menu_commutity_community_config"
             groups="clv_base.group_person_user"
             sequence="10"
             action="clv_person.act_open_clv_person_category_view"/>
- -->
+
     </data>
 </openerp>
