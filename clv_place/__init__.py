@@ -18,7 +18,7 @@
 ################################################################################
 
 import clv_place
-# import category
+import category
 # import tag
 # import annotation
 # import address

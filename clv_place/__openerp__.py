@@ -34,8 +34,8 @@
     'data': [
         'security/clv_place_security.xml',
         'security/ir.model.access.csv',
-        # 'clv_place_view.xml',
-        # 'category/clv_place_category_view.xml',
+        'clv_place_view.xml',
+        'category/clv_place_category_view.xml',
         # 'tag/clv_tag_view.xml',
         # 'annotation/clv_annotation_view.xml',
         # 'address/clv_address_view.xml',
