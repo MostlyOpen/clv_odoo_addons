@@ -17,39 +17,40 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
-{
-    'name': 'Person',
-    'summary': 'Person Module used in CLVsol Solutions.',
-    'version': '2.0',
-    'author': 'Carlos Eduardo Vercelino - CLVsol',
-    'category': 'Generic Modules/Others',
-    'license': 'AGPL-3',
-    'website': 'http://clvsol.com',
-    'images': [],
-    'depends': [
-        'clv_base',
-        'clv_tag',
-        'clv_annotation',
-        'clv_address',
-        ],
-    'data': [
-        'security/clv_person_security.xml',
-        'security/ir.model.access.csv',
-        'clv_person_view.xml',
-        'category/clv_person_category_view.xml',
-        'tag/clv_tag_view.xml',
-        'annotation/clv_annotation_view.xml',
-        'address/clv_address_view.xml',
-        'person_address/clv_person_address_view.xml',
-        'menu/clv_person_menu_view.xml',
-        ],
-    'demo': [],
-    'test': [],
-    'init_xml': [],
-    'test': [],
-    'update_xml': [],
-    'installable': True,
-    'application': False,
-    'active': False,
-    'css': [],
-}
+from openerp.osv import fields, osv
+from datetime import *
+
+
+class PersonAddress(osv.Model):
+    _name = 'clv_person.address'
+
+    _columns = {
+        'address_id': fields.many2one('clv_address', 'Address', required=False),
+        'person_id': fields.many2one('clv_person', string='Person', help='Person'),
+        'sign_in_date': fields.datetime("Sign in date", required=False),
+        'sign_out_date': fields.datetime("Sign out date", required=False),
+        'notes': fields.text(string='Notes'),
+        'active': fields.boolean(
+            'Active',
+            help="If unchecked, it will allow you to hide the person address without removing it."
+            ),
+    }
+
+    _order = "sign_in_date desc"
+
+    _defaults = {
+        'sign_in_date': lambda *a: datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        'active': 1,
+    }
+
+
+class Person(osv.osv):
+    _inherit = 'clv_person'
+
+    _columns = {
+        'person_address_ids': fields.one2many(
+            'clv_person.address',
+            'person_id',
+            'Person Addresses'
+            ),
+    }
