@@ -17,9 +17,28 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
-import clv_person
-import category
-import tag
-import annotation
-# import address
-# import person_address
+from openerp import models, fields
+
+
+class Person(models.Model):
+    _inherit = 'clv_person'
+
+    annotation_ids = fields.Many2many(
+        'clv_annotation',
+        'clv_person_annotation_rel',
+        'person_id',
+        'annotation_id',
+        'Annotations'
+        )
+
+
+class Annotation(models.Model):
+    _inherit = 'clv_annotation'
+
+    person_ids = fields.Many2many(
+        'clv_person',
+        'clv_person_annotation_rel',
+        'annotation_id',
+        'person_id',
+        'Persons'
+        )

@@ -17,9 +17,4 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
-import clv_person
-import category
-import tag
-import annotation
-# import address
-# import person_address
+import clv_annotation

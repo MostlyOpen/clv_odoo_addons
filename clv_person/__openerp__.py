@@ -29,7 +29,7 @@
     'depends': [
         'clv_base',
         'clv_tag',
-        # 'clv_annotation',
+        'clv_annotation',
         # 'clv_address',
         ],
     'data': [
@@ -38,7 +38,7 @@
         'clv_person_view.xml',
         'category/clv_person_category_view.xml',
         'tag/clv_tag_view.xml',
-        # 'annotation/clv_annotation_view.xml',
+        'annotation/clv_annotation_view.xml',
         # 'address/clv_address_view.xml',
         # 'person_address/clv_person_address_view.xml',
         'menu/clv_person_menu_view.xml',
