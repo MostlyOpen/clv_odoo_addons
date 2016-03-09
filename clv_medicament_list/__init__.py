@@ -19,5 +19,5 @@
 
 import clv_medicament_list
 import category
-# import version
+import version
 # import item

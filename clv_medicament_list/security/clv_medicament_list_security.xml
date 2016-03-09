@@ -15,5 +15,9 @@
             <field name="name">Medicament List Category Manager</field>
         </record>
 
+        <record id="clv_base.group_medicament_list_version_manager" model="res.groups">
+            <field name="name">Medicament List Version Manager</field>
+        </record>
+
     </data>
 </openerp>
