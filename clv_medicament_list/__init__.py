@@ -18,6 +18,6 @@
 ################################################################################
 
 import clv_medicament_list
-# import category
+import category
 # import version
 # import item

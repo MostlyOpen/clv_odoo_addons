@@ -21,17 +21,17 @@
                 sequence="20"
                 action="clv_medicament_list.act_open_clv_medicament_list_item_view" />
  -->
-        <!-- Pharmacy/Configuration/Configuration/List-->
-        <menuitem name="List" id="menu_pharmacy_config_config_medicament_list"  
+        <!-- Pharmacy/Configuration/Configuration/Medicament List-->
+<!--         <menuitem name="Medicament List" id="menu_pharmacy_config_config_medicament_list"  
             parent="clv_base.menu_pharmacy_config_config"
             groups="clv_base.group_user"
             sequence="15"/>
-            <!-- Pharmacy/Configuration/Configuration/List/Categories -->
-<!--             <menuitem name="Categories" id="menu_pharmacy_config_config_medicament_list_categories" 
-                parent="menu_pharmacy_config_config_medicament_list"
+ -->            <!-- Pharmacy/Configuration/Configuration/Medicament List/Categories -->
+            <menuitem name="Medicament List Categories" id="menu_pharmacy_config_config_medicament_list_categories" 
+                parent="clv_base.menu_pharmacy_config_config"
                 groups="clv_base.group_medicament_list_user"
-                sequence="10"
+                sequence="30"
                 action="clv_medicament_list.act_open_clv_medicament_list_category_view"/>
- -->
+
     </data>
 </openerp>

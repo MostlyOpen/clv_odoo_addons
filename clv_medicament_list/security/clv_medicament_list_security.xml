@@ -11,5 +11,9 @@
             <field name="implied_ids" eval="[(4, ref('clv_base.group_medicament_list_user'))]"/>
         </record>
         
+        <record id="clv_base.group_medicament_list_category_manager" model="res.groups">
+            <field name="name">Medicament List Category Manager</field>
+        </record>
+
     </data>
 </openerp>
