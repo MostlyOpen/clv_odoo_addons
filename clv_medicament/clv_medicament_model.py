@@ -146,3 +146,13 @@ class MedicamentModel_2(models.Model):
     name_active_component = fields.Char('Name (Active Component)', compute='_name_active_component_get_fnc')
     active_component_name = fields.Char(related='active_component.name',
                                         string='Related Active Component')
+
+
+class MedicamentModel_3(models.Model):
+    _inherit = 'clv_medicament.model'
+
+    manufacturer = fields.Many2one('clv_medicament.manufacturer',
+                                   string='Manufacturer',
+                                   help='Medicament Manufacturer')
+    manufacturer_name = fields.Char(related='manufacturer.name',
+                                    string='Related Manufacturer')
