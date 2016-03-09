@@ -17,40 +17,28 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
-{
-    'name': 'Medicament',
-    'summary': 'Medicament Module used in CLVsol Solutions.',
-    'version': '2.0',
-    'author': 'Carlos Eduardo Vercelino - CLVsol',
-    'category': 'Generic Modules/Others',
-    'license': 'AGPL-3',
-    'website': 'http://clvsol.com',
-    'images': [],
-    'depends': [
-        'clv_base',
+from openerp import models, fields
+
+
+class Tag(models.Model):
+    _inherit = 'clv_tag'
+
+    medicament_ids = fields.Many2many(
+        'clv_medicament',
+        'clv_medicament_tag_rel',
+        'tag_id',
+        'medicament_id',
+        'Medicaments'
+        )
+
+
+class Medicament(models.Model):
+    _inherit = 'clv_medicament'
+
+    tag_ids = fields.Many2many(
         'clv_tag',
-        'clv_annotation',
-        ],
-    'data': [
-        'security/clv_medicament_security.xml',
-        'security/ir.model.access.csv',
-        'clv_medicament_view.xml',
-        'uom/clv_medicament_uom_view.xml',
-        'form/clv_medicament_form_view.xml',
-        'category/clv_medicament_category_view.xml',
-        'tag/clv_tag_view.xml',
-        'annotation/clv_annotation_view.xml',
-        'active_component/clv_medicament_active_component_view.xml',
-        'manufacturer/clv_medicament_manufacturer_view.xml',
-        'menu/clv_medicament_menu_view.xml',
-        ],
-    'demo': [],
-    'test': [],
-    'init_xml': [],
-    'test': [],
-    'update_xml': [],
-    'installable': True,
-    'application': False,
-    'active': False,
-    'css': [],
-}
+        'clv_medicament_tag_rel',
+        'medicament_id',
+        'tag_id',
+        'Tags'
+        )

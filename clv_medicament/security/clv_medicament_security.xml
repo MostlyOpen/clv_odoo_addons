@@ -23,5 +23,13 @@
             <field name="name">Medicament Category Manager</field>
         </record>
 
+        <record id="clv_base.group_medicament_active_component_manager" model="res.groups">
+            <field name="name">Medicament Active Component Manager</field>
+        </record>
+
+        <record id="clv_base.group_medicament_manufacturer_manager" model="res.groups">
+            <field name="name">Medicament Manufacturer Manager</field>
+        </record>
+
     </data>
 </openerp>

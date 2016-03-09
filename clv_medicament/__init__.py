@@ -22,3 +22,7 @@ import clv_medicament
 import uom
 import form
 import category
+import tag
+import annotation
+import active_component
+import manufacturer

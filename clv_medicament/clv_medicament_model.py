@@ -18,7 +18,6 @@
 ################################################################################
 
 from openerp import models, fields
-# from openerp.osv import fields, osv
 from datetime import datetime
 import math
 
@@ -106,3 +105,54 @@ class MedicamentModel(models.Model):
                      'You provided an invalid "EAN13 Barcode" reference. ' +
                      'You may use the "Internal Reference" field instead.',
                      ['ean13'])]
+
+
+class MedicamentModel_2(models.Model):
+    _inherit = 'clv_medicament.model'
+
+    def name_get(self, cr, uid, ids, context={}):
+        if not len(ids):
+            return []
+        reads = self.read(cr, uid, ids, ['name', 'code'], context=context)
+        res = []
+        for record in reads:
+            name = record['name']
+            if record['code']:
+                name = name + ' {' + record['code'] + '}'
+            res.append((record['id'], name))
+        return res
+
+    def name_active_component_get(self, cr, uid, ids, context=None):
+        if context is None:
+            context = {}
+        if isinstance(ids, (int, long)):
+            ids = [ids]
+        reads = self.read(cr, uid, ids, ['name', 'active_component_name'], context=context)
+        res = []
+        for record in reads:
+            name = record['name']
+            if record['active_component_name']:
+                name = name + ' (' + record['active_component_name'] + ')'
+            res.append((record['id'], name))
+        return res
+
+    def _name_active_component_get_fnc(self, cr, uid, ids, prop, unknow_none, context=None):
+        res = self.name_active_component_get(cr, uid, ids, context=context)
+        return dict(res)
+
+    active_component = fields.Many2one('clv_medicament.active_component',
+                                       string='Active Component',
+                                       help='Medicament Active Component')
+    name_active_component = fields.Char('Name (Active Component)', compute='_name_active_component_get_fnc')
+    active_component_name = fields.Char(related='active_component.name',
+                                        string='Related Active Component')
+
+
+class MedicamentModel_3(models.Model):
+    _inherit = 'clv_medicament.model'
+
+    manufacturer = fields.Many2one('clv_medicament.manufacturer',
+                                   string='Manufacturer',
+                                   help='Medicament Manufacturer')
+    manufacturer_name = fields.Char(related='manufacturer.name',
+                                    string='Related Manufacturer')

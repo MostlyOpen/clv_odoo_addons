@@ -22,36 +22,36 @@
             sequence="10"
             action="clv_medicament.act_open_clv_medicament_category_view"/>
         <!-- Pharmacy/Configuration/Configuration/Medicament/Active Components -->
-<!--         <menuitem name="Active Components" id="menu_pharmacy_config_config_medicament_active_components"
+        <menuitem name="Active Components" id="menu_pharmacy_config_config_medicament_active_components"
             parent="clv_base.menu_pharmacy_config_config_medicament"
             groups="clv_base.group_manager"
             sequence="20"
             action="clv_medicament.act_open_clv_medicament_active_component_view"/>
- -->            <!-- Pharmacy/Configuration/Configuration/Medicament/Active Components/Strings -->
-<!--             <menuitem name="Strings" id="menu_pharmacy_config_config_medicament_active_components_strings"
+            <!-- Pharmacy/Configuration/Configuration/Medicament/Active Components/Strings -->
+            <menuitem name="Strings" id="menu_pharmacy_config_config_medicament_active_components_strings"
                 parent="menu_pharmacy_config_config_medicament_active_components"
                 groups="clv_base.group_manager"
                 sequence="10"
                 action="clv_medicament.act_open_clv_medicament_active_component_str_view"/>
- -->        <!-- Pharmacy/Configuration/Configuration/Medicament/Therapeutic Classes -->
+        <!-- Pharmacy/Configuration/Configuration/Medicament/Therapeutic Classes -->
 <!--         <menuitem name="Therapeutic Classes" id="menu_pharmacy_config_config_medicament_therapeutic_classes"
             parent="clv_base.menu_pharmacy_config_config_medicament"
             groups="clv_base.group_manager"
             sequence="30"
             action="clv_medicament.act_open_clv_medicament_therapeutic_class_view" />
  -->        <!-- Pharmacy/Configuration/Configuration/Medicament/Manufacturers -->
-<!--         <menuitem name="Manufacturers" id="menu_pharmacy_config_config_medicament_manufacturers"
+        <menuitem name="Manufacturers" id="menu_pharmacy_config_config_medicament_manufacturers"
             parent="clv_base.menu_pharmacy_config_config_medicament"
             groups="clv_base.group_manager"
             sequence="40"
             action="clv_medicament.act_open_clv_medicament_manufacturer_view" />
- -->            <!-- Pharmacy/Configuration/Configuration/Medicament/Manufacturers/Strings -->
-<!--             <menuitem name="Strings" id="menu_pharmacy_config_config_medicament_manufacturers_strings"
+            <!-- Pharmacy/Configuration/Configuration/Medicament/Manufacturers/Strings -->
+            <menuitem name="Strings" id="menu_pharmacy_config_config_medicament_manufacturers_strings"
                 parent="menu_pharmacy_config_config_medicament_manufacturers"
                 groups="clv_base.group_manager"
                 sequence="10"
                 action="clv_medicament.act_open_clv_medicament_manufacturer_str_view" />
- -->        <!-- Pharmacy/Configuration/Configuration/Medicament/Form -->
+        <!-- Pharmacy/Configuration/Configuration/Medicament/Form -->
         <menuitem name="Form" id="menu_pharmacy_config_config_medicament_form"
             parent="clv_base.menu_pharmacy_config_config_medicament"
             groups="clv_base.group_manager"

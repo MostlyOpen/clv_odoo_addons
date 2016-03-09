@@ -34,12 +34,14 @@
                                 <field name="presentation" placeholder="Presentation..."/>
                             </group>
                             <group name="X">
+                                <field name="active_component" placeholder="Active Component..." options="{'no_open': False, 'no_create': True}"/>
                                 <field name="concentration" placeholder="Concentration..."/>
                                 <field name="pres_form" placeholder="Presentation Form..." options="{'no_open': False, 'no_create': True}"/>
                                 <field name="pres_quantity" placeholder="Presentation Quantity..."/>
                                 <field name="pres_quantity_unit" placeholder="Presentation Quantity Unity..." options="{'no_open': False, 'no_create': True}"/>
                             </group>
                             <group name="Y">
+                                <field name="manufacturer" placeholder="Manufacturer..." options="{'no_open': False, 'no_create': True}"/>
                             </group>
                         </group>
                         <notebook>
@@ -77,6 +79,8 @@
                     <field name="presentation"/>
                     <field name="concentration"/>
                     <field name="pres_form"/>
+                    <field name="active_component"/>
+                    <field name="manufacturer"/>
                     <field name="code"/>
                     <field name="is_product"/>
                     <field name="is_fraction"/>
@@ -95,6 +99,8 @@
                     <field name="name"/>
                     <field name="medicament_name"/>
                     <field name="code"/>
+                    <field name="active_component"/>
+                    <field name="manufacturer"/>
                     <field name="concentration"/>
                     <field name="notes"/>
                     <field name="ean13"/>
@@ -104,10 +110,14 @@
                     <filter string="Not a Fraction" name="not_fraction" domain="[('is_fraction','=',0)]"/>
                     <filter string="Fraction" name="fraction" domain="[('is_fraction','=',1)]"/>
                     <filter string="Missing Medicament Code" name="product" domain="[('code','=',False)]"/>
-                    <filter string="Missing Concentration" name="missing_active_component" domain="[('concentration','=',False)]"/>
+                    <filter string="Missing Active Component" name="missing_active_component" domain="[('active_component','=',False)]"/>
+                    <filter string="Missing Manufacturer" name="missing_manufacturer" domain="[('manufacturer','=',False)]"/>
+                    <filter string="Missing Concentration" name="missing_concentration" domain="[('concentration','=',False)]"/>
                     <filter string="Missing Presentastion Form" name="missing_pres_form" domain="[('pres_form','=',False)]"/>
                     <separator/>
                     <group expand="0" string="Group By...">
+                        <filter string="Active Component" domain="[]" context="{'group_by':'active_component'}"/>
+                        <filter string="Manufacturer" domain="[]" context="{'group_by':'manufacturer'}"/>
                         <filter string="Concentration" domain="[]" context="{'group_by': 'concentration'}"/>
                         <filter string="Presentaion Form" domain="[]" context="{'group_by': 'pres_form'}"/>
                     </group>
