@@ -21,7 +21,7 @@ from openerp import models, fields
 from datetime import datetime
 
 
-class clv_medicament_list(models.Model):
+class MedicamentList(models.Model):
     _name = 'clv_medicament_list'
 
     name = fields.Char('Medicament List Name', required=True, size=64, translate=True)
