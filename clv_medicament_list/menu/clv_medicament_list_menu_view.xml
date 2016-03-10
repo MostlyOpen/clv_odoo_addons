@@ -15,12 +15,12 @@
                 sequence="10"
                 action="clv_medicament_list.act_open_clv_medicament_list_version_view" />
             <!-- Pharmacy/Medicament/Lists/Items -->
-<!--             <menuitem name="Items" id="menu_pharmacy_medicament_lists_items"
+            <menuitem name="Items" id="menu_pharmacy_medicament_lists_items"
                 parent="clv_medicament_list.menu_pharmacy_medicament_lists"
                 groups="clv_base.group_medicament_list_user"
                 sequence="20"
                 action="clv_medicament_list.act_open_clv_medicament_list_item_view" />
- -->
+
         <!-- Pharmacy/Configuration/Configuration/Medicament List-->
 <!--         <menuitem name="Medicament List" id="menu_pharmacy_config_config_medicament_list"  
             parent="clv_base.menu_pharmacy_config_config"

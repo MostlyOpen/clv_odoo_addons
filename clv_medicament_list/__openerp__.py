@@ -27,7 +27,7 @@
     'website': 'http://clvsol.com',
     'images': [],
     'depends': [
-        'clv_base',
+        'clv_medicament',
         ],
     'data': [
         'security/clv_medicament_list_security.xml',
@@ -35,7 +35,7 @@
         'clv_medicament_list_view.xml',
         'category/clv_medicament_list_category_view.xml',
         'version/clv_medicament_list_version_view.xml',
-        # 'item/clv_medicament_list_item_view.xml',
+        'item/clv_medicament_list_item_view.xml',
         'menu/clv_medicament_list_menu_view.xml',
         ],
     'demo': [],
