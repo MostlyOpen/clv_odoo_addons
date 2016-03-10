@@ -17,7 +17,34 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
-import clv_medicament_list
-import category
-import version
-import item
+from openerp import models, fields
+
+
+class MedicamentListItem(models.Model):
+    _name = 'clv_medicament_list.item'
+
+    list_version_id = fields.Many2one('clv_medicament_list.version', string='Medicament List Version',
+                                      help='Medicament List Version', required=True)
+    medicament_id = fields.Many2one('clv_medicament', string='Medicament',
+                                    help='Medicament', required=False)
+    medicament_ref = fields.Reference([('clv_medicament', 'Medicament'),
+                                       ], 'Medicament Reference')
+    notes = fields.Text(string='Notes')
+    order = fields.Integer(string='Order', default=10)
+    # discount = fields.Float(string='Discount [%]')
+    # subsidy = fields.Float(string='Subsidy [%]')
+    active = fields.Boolean('Active',
+                            help='The active field allows you to hide the medicament list item without removing it.',
+                            default=1)
+
+    _order = 'list_version_id, order'
+
+
+class MedicamentListVersion(models.Model):
+    _inherit = 'clv_medicament_list.version'
+
+    medicament_list_item_ids = fields.One2many(
+        'clv_medicament_list.item',
+        'list_version_id',
+        'Medicament List Itens'
+        )
