@@ -21,7 +21,7 @@ from openerp import models, fields, api
 from datetime import *
 
 
-class clv_file(models.Model):
+class File(models.Model):
     _name = 'clv_file'
 
     name = fields.Char('Name', required=True, size=256, translate=False)

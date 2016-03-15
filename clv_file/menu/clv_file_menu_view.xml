@@ -8,12 +8,12 @@
             groups="clv_base.group_file_user"
             sequence="10"
             action="clv_file.act_open_clv_file_view"/>
-        <!-- File Management/File Management/Configuration/File -->
-<!--         <menuitem name="File Categories" id="menu_fmng_fmng_config_file_categories" 
-            parent="clv_base.menu_fmng_fmng_config"
+        <!-- File Management/Configuration/Configuration/File Categories-->
+        <menuitem name="File Categories" id="menu_fmng_fmng_config_file_categories" 
+            parent="clv_base.menu_fmng_config_config"
             groups="clv_base.group_file_user"
             sequence="10"
             action="clv_file.act_open_clv_file_category_view"/>
- -->
+
     </data>
 </openerp>

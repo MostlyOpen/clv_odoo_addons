@@ -33,6 +33,7 @@
         'security/clv_file_security.xml',
         'security/ir.model.access.csv',
         'clv_file_view.xml',
+        'category/clv_file_category_view.xml',
         'menu/clv_file_menu_view.xml',
         ],
     'demo': [],
