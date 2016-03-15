@@ -3,17 +3,17 @@
     <data>
 
         <!-- Community -->
-        <menuitem name="Community" id="menu_commutity" 
+        <menuitem name="Community" id="menu_community" 
             groups="clv_base.group_user"
             sequence="14"/>
             <!-- Community/Community -->
-            <menuitem name="Community" id="menu_commutity_community"  
-                parent="menu_commutity"
+            <menuitem name="Community" id="menu_community_community"  
+                parent="menu_community"
                 groups="clv_base.group_user"
                 sequence="10"/>
                 <!-- Community/Community/Configuration -->
-                <menuitem name="Configuration" id="menu_commutity_community_config"  
-                    parent="menu_commutity_community"
+                <menuitem name="Configuration" id="menu_community_community_config"  
+                    parent="menu_community_community"
                     groups="clv_base.group_manager"
                     sequence="90"/>
 

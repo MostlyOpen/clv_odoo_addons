@@ -29,6 +29,7 @@
     'data': [
         'security/clv_base_security.xml',
         'menu/clv_base_menu_view.xml',
+        'menu/clv_fmng_menu_view.xml',
         'menu/clv_groupings_menu_view.xml',
         'menu/clv_agro_menu_view.xml',
         'menu/clv_community_menu_view.xml',
