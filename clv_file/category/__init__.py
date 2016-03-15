@@ -17,33 +17,4 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
-{
-    'name': 'Base Module',
-    'summary': 'Base Module needed for all CLVsol Solutions.',
-    'version': '2.0',
-    'author': 'Carlos Eduardo Vercelino - CLVsol',
-    'category': 'Generic Modules/Others',
-    'license': 'AGPL-3',
-    'website': 'http://clvsol.com',
-    'depends': [],
-    'data': [
-        'security/clv_base_security.xml',
-        'menu/clv_base_menu_view.xml',
-        'menu/clv_fmng_menu_view.xml',
-        'menu/clv_groupings_menu_view.xml',
-        'menu/clv_agro_menu_view.xml',
-        'menu/clv_community_menu_view.xml',
-        'menu/clv_health_menu_view.xml',
-        'menu/clv_insurance_menu_view.xml',
-        'menu/clv_pharmacy_menu_view.xml',
-        ],
-    'demo': [],
-    'test': [],
-    'init_xml': [],
-    'test': [],
-    'update_xml': [],
-    'installable': True,
-    'application': False,
-    'active': False,
-    'css': [],
-}
+import clv_file_category
