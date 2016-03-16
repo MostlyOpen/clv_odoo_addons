@@ -17,6 +17,28 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
-import clv_file
-import category
-import tag
+from openerp import models, fields
+
+
+class Tag(models.Model):
+    _inherit = 'clv_tag'
+
+    file_ids = fields.Many2many(
+        'clv_file',
+        'clv_file_tag_rel',
+        'tag_id',
+        'file_id',
+        'Files'
+        )
+
+
+class Person(models.Model):
+    _inherit = 'clv_file'
+
+    tag_ids = fields.Many2many(
+        'clv_tag',
+        'clv_file_tag_rel',
+        'file_id',
+        'tag_id',
+        'Tags'
+        )

@@ -28,12 +28,14 @@
     'images': [],
     'depends': [
         'clv_base',
+        'clv_tag',
         ],
     'data': [
         'security/clv_file_security.xml',
         'security/ir.model.access.csv',
         'clv_file_view.xml',
         'category/clv_file_category_view.xml',
+        'tag/clv_tag_view.xml',
         'menu/clv_file_menu_view.xml',
         ],
     'demo': [],
