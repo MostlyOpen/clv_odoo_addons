@@ -21,3 +21,4 @@ import clv_file
 import category
 import tag
 import annotation
+import kanban

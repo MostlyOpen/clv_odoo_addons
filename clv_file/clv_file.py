@@ -48,7 +48,8 @@ class File(models.Model):
 
     @api.one
     def _compute_path_str(self):
-        if self.alias:
-            self.path = self.alias + '_' + self.code + '_'
-        else:
-            self.path = '_' + self.code + '_'
+        if self.code:
+            if self.alias:
+                self.path = self.alias + '_' + self.code + '_'
+            else:
+                self.path = '_' + self.code + '_'
