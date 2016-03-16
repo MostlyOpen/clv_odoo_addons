@@ -29,6 +29,7 @@
     'depends': [
         'clv_base',
         'clv_tag',
+        'clv_annotation',
         ],
     'data': [
         'security/clv_file_security.xml',
@@ -36,6 +37,7 @@
         'clv_file_view.xml',
         'category/clv_file_category_view.xml',
         'tag/clv_tag_view.xml',
+        'annotation/clv_annotation_view.xml',
         'menu/clv_file_menu_view.xml',
         ],
     'demo': [],

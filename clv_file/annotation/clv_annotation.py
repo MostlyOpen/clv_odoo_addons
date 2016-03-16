@@ -20,25 +20,25 @@
 from openerp import models, fields
 
 
-class Tag(models.Model):
-    _inherit = 'clv_tag'
-
-    file_ids = fields.Many2many(
-        'clv_file',
-        'clv_file_tag_rel',
-        'tag_id',
-        'file_id',
-        'Files'
-        )
-
-
 class File(models.Model):
     _inherit = 'clv_file'
 
-    tag_ids = fields.Many2many(
-        'clv_tag',
-        'clv_file_tag_rel',
+    annotation_ids = fields.Many2many(
+        'clv_annotation',
+        'clv_file_annotation_rel',
         'file_id',
-        'tag_id',
-        'Tags'
+        'annotation_id',
+        'Annotations'
+        )
+
+
+class Annotation(models.Model):
+    _inherit = 'clv_annotation'
+
+    file_ids = fields.Many2many(
+        'clv_file',
+        'clv_file_annotation_rel',
+        'annotation_id',
+        'file_id',
+        'Files'
         )
