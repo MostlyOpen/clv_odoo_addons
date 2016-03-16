@@ -24,3 +24,4 @@ import annotation
 import wkf
 import kanban
 import history
+import seq
