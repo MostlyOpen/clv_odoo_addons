@@ -17,47 +17,4 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
-{
-    'name': 'File',
-    'summary': 'File Module used in CLVsol Solutions.',
-    'version': '2.0',
-    'author': 'Carlos Eduardo Vercelino - CLVsol',
-    'category': 'Generic Modules/Others',
-    'license': 'AGPL-3',
-    'website': 'http://clvsol.com',
-    'images': [],
-    'depends': [
-        'clv_base',
-        'clv_tag',
-        'clv_annotation',
-        ],
-    'data': [
-        'security/clv_file_security.xml',
-        'security/ir.model.access.csv',
-        'clv_file_view.xml',
-        'category/clv_file_category_view.xml',
-        'tag/clv_tag_view.xml',
-        'annotation/clv_annotation_view.xml',
-        'wkf/clv_file_workflow.xml',
-        'wkf/clv_file_wkf_view.xml',
-        'kanban/clv_file_view.xml',
-        'history/clv_file_history_view.xml',
-        'menu/clv_file_menu_view.xml',
-        'seq/clv_file_seq_view.xml',
-        'seq/clv_file_sequence03.xml',
-        'seq/clv_file_sequence04.xml',
-        'seq/clv_file_sequence06.xml',
-        'seq/clv_file_sequence09.xml',
-        'seq/clv_file_sequence10.xml',
-        'seq/clv_file_category_sequence.xml',
-        ],
-    'demo': [],
-    'test': [],
-    'init_xml': [],
-    'test': [],
-    'update_xml': [],
-    'installable': True,
-    'application': False,
-    'active': False,
-    'css': [],
-}
+import clv_tag

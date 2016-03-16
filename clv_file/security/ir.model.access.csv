@@ -7,3 +7,7 @@ access_clv_file_smanager,clv_file,model_clv_file,clv_base.group_smanager,1,1,1,1
 access_clv_file_category_file_user,clv_file.category,model_clv_file_category,clv_base.group_file_user,1,0,0,0
 access_clv_file_category_file_category_manager,clv_file.category,model_clv_file_category,clv_base.group_file_category_manager,1,1,1,0
 access_clv_file_category_smanager,clv_file.category,model_clv_file_category,clv_base.group_smanager,1,1,1,1
+
+access_clv_file_history_file_user,clv_file.history,model_clv_file_history,clv_base.group_file_user,1,0,0,0
+access_clv_file_history_file_manager,clv_file.history,model_clv_file_history,clv_base.group_file_manager,1,1,1,0
+access_clv_file_history_smanager,clv_file.history,model_clv_file_history,clv_base.group_smanager,1,1,1,1
