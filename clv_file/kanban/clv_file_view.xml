@@ -61,9 +61,9 @@
                                         <li t-if="record.tag_ids.raw_value">
                                             <field name="tag_ids"/>
                                         </li>
-                                        <!--li t-if="record.state.raw_value">
+                                        <li t-if="record.state.raw_value">
                                             <field name="state"/>
-                                        </li-->
+                                        </li>
                                     </ul>
                                 </div>
                             </div>

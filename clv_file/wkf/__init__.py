@@ -17,10 +17,4 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
-import clv_file
-import category
-import tag
-import annotation
-import wkf
-import kanban
-import history
+import clv_file_wkf

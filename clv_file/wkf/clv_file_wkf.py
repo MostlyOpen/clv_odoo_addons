@@ -17,10 +17,47 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
-import clv_file
-import category
-import tag
-import annotation
-import wkf
-import kanban
-import history
+from openerp import models, fields, api
+from datetime import *
+
+
+class File(models.Model):
+    _inherit = 'clv_file'
+
+    date_status_change = fields.Datetime("Status change date", required=True, readonly=True)
+    state = fields.Selection([
+        ('new', 'New'),
+        ('getting', 'Getting'),
+        ('stored', 'Stored'),
+        ('checked', 'Checked'),
+        ('deleted', 'Deleted'),
+        ], string='Status', default='new', readonly=True, required=True, help="")
+
+    _defaults = {
+        'date_status_change': lambda *a: datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        }
+
+    @api.one
+    def button_new(self):
+        self.date_status_change = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        self.state = 'new'
+
+    @api.one
+    def button_getting(self):
+        self.date_status_change = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        self.state = 'getting'
+
+    @api.one
+    def button_stored(self):
+        self.date_status_change = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        self.state = 'stored'
+
+    @api.one
+    def button_checked(self):
+        self.date_status_change = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        self.state = 'checked'
+
+    @api.one
+    def button_deleted(self):
+        self.date_status_change = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        self.state = 'deleted'
