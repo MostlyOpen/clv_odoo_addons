@@ -75,24 +75,24 @@ class File(models.Model):
     @api.one
     def button_new(self):
         super(File, self).button_new()
-        self.insert_clv_file_history(self.id, 'new', '')
+        self.insert_clv_file_history(self.id, 'new', '[state]')
 
     @api.one
     def button_getting(self):
         super(File, self).button_getting()
-        self.insert_clv_file_history(self.id, 'getting', '')
+        self.insert_clv_file_history(self.id, 'getting', '[state]')
 
     @api.one
     def button_stored(self):
         super(File, self).button_stored()
-        self.insert_clv_file_history(self.id, 'stored', '')
+        self.insert_clv_file_history(self.id, 'stored', '[state]')
 
     @api.one
     def button_checked(self):
         super(File, self).button_checked()
-        self.insert_clv_file_history(self.id, 'checked', '')
+        self.insert_clv_file_history(self.id, 'checked', '[state]')
 
     @api.one
     def button_deleted(self):
         super(File, self).button_deleted()
-        self.insert_clv_file_history(self.id, 'deleted', '')
+        self.insert_clv_file_history(self.id, 'deleted', '[state]')
