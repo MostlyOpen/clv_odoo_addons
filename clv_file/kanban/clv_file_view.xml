@@ -42,7 +42,7 @@
                                         <img t-att-src="kanban_image('clv_file', 'image_medium', record.id.value)" class="oe_clv_file_picture"/>
                                     </a-->
                                 </div>
-                                <div class="oe_kanban_details">
+                                <div name="kanban_details" class="oe_kanban_details">
                                     <!--h4 class="oe_partner_heading"><a type="open"><field name="name"/></a></h4-->
                                     <h3><a type="open"><field name="name"/></a></h3>
                                     <ul>
@@ -60,9 +60,6 @@
                                         </li>
                                         <li t-if="record.tag_ids.raw_value">
                                             <field name="tag_ids"/>
-                                        </li>
-                                        <li t-if="record.state.raw_value">
-                                            <field name="state"/>
                                         </li>
                                     </ul>
                                 </div>
@@ -91,13 +88,6 @@
               </p>
             </field>
         </record>
-        
-        <!--record model="ir.actions.act_window.view" id="act_open_clv_file_view_kanban">
-            <field name="act_window_id" ref="act_open_clv_file_view"/>
-            <field name="sequence" eval="10"/>
-            <field name="view_mode">kanban</field>
-            <field name="view_id" ref="view_clv_file_kanban"/>
-        </record-->
         
     </data>
 </openerp>

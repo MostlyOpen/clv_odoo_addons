@@ -33,7 +33,7 @@ class FileHistory(models.Model):
         ('stored', 'Stored'),
         ('checked', 'Checked'),
         ('deleted', 'Deleted'),
-        ], string='Status', default='new', readonly=True, required=True, help="")
+        ], string='Status', readonly=True)
     notes = fields.Text(string='Notes')
 
     _order = "date desc"
@@ -67,37 +67,32 @@ class File(models.Model):
 
     @api.multi
     def write(self, values):
-        if ('state' not in values) and ('date' not in values):
+        if ('state' not in values) and ('date_status_change' not in values):
             notes = values.keys()
             self.insert_clv_file_history(self.id, self.state, notes)
         return super(File, self).write(values)
 
     @api.one
     def button_new(self):
-        self.date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        self.state = 'new'
-        self.insert_clv_file_history(self.id, 'new', '')
+        super(File, self).button_new()
+        self.insert_clv_file_history(self.id, 'new', '[state]')
 
     @api.one
     def button_getting(self):
-        self.date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        self.state = 'getting'
-        self.insert_clv_file_history(self.id, 'getting', '')
+        super(File, self).button_getting()
+        self.insert_clv_file_history(self.id, 'getting', '[state]')
 
     @api.one
     def button_stored(self):
-        self.date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        self.state = 'stored'
-        self.insert_clv_file_history(self.id, 'stored', '')
+        super(File, self).button_stored()
+        self.insert_clv_file_history(self.id, 'stored', '[state]')
 
     @api.one
     def button_checked(self):
-        self.date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        self.state = 'checked'
-        self.insert_clv_file_history(self.id, 'checked', '')
+        super(File, self).button_checked()
+        self.insert_clv_file_history(self.id, 'checked', '[state]')
 
     @api.one
     def button_deleted(self):
-        self.date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        self.state = 'deleted'
-        self.insert_clv_file_history(self.id, 'deleted', '')
+        super(File, self).button_deleted()
+        self.insert_clv_file_history(self.id, 'deleted', '[state]')
