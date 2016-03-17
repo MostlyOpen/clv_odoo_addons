@@ -61,3 +61,15 @@ class File(models.Model):
     def button_deleted(self):
         self.date_status_change = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         self.state = 'deleted'
+
+    @api.one
+    def restart_workfow(self):
+        self.date_status_change = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        self.delete_workflow()
+        self.create_workflow()
+        return True
+
+    @api.one
+    def stop_workfow(self):
+        self.delete_workflow()
+        return True

@@ -17,6 +17,8 @@
                         <button string="Deleted" name="button_deleted" states="checked" type="workflow" groups="clv_base.group_file_manager"/>
                         <field name="state" widget="statusbar" statusbar_visible="new,getting,stored,checked,deleted"
                         statusbar_colors='{"new":"red","getting":"red","stored":"red","checked":"blue"}'/>
+                        <button name="restart_workfow" states="new,getting,stored,checked,deleted" string="Restart Workflow" type="object"  groups="clv_base.group_smanager"/>
+                        <button name="stop_workfow" states="new,getting,stored,checked,deleted" string="Stop Workflow" type="object"  groups="clv_base.group_smanager"/>
                     </header>
                 </sheet>
                 <field name="date_inclusion" position="before">
