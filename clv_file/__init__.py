@@ -21,7 +21,7 @@ import clv_file
 import category
 import tag
 import annotation
-import wkf
 import kanban
+import wkf
 import history
 import seq

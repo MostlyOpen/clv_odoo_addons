@@ -92,6 +92,8 @@ class File(models.Model):
                 code_len = vals['code_size']
             else:
                 code_len = self.code_size
+            if code_len is False:
+                code_len = 10
             if (code_len == 3):
                 code_seq = self.pool.get('ir.sequence').get(self._cr, self._uid, 'clv_file.code03')
             elif (code_len == 4):
