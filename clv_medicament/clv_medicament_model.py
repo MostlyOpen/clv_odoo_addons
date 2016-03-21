@@ -57,7 +57,7 @@ def check_ean(eancode):
     return ean_checksum(eancode) == int(eancode[-1])
 
 
-class MedicamentModel(models.Model):
+class MedicamentModel(models.AbstractModel):
     _name = 'clv_medicament.model'
 
     name = fields.Char('Product Name', select=True, required=True)
@@ -107,7 +107,7 @@ class MedicamentModel(models.Model):
                      ['ean13'])]
 
 
-class MedicamentModel_2(models.Model):
+class MedicamentModel_2(models.AbstractModel):
     _inherit = 'clv_medicament.model'
 
     def name_get(self, cr, uid, ids, context={}):
@@ -148,7 +148,7 @@ class MedicamentModel_2(models.Model):
                                         string='Related Active Component')
 
 
-class MedicamentModel_3(models.Model):
+class MedicamentModel_3(models.AbstractModel):
     _inherit = 'clv_medicament.model'
 
     manufacturer = fields.Many2one('clv_medicament.manufacturer',
