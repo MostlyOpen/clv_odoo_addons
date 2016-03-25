@@ -15,12 +15,12 @@
             groups="clv_base.group_professional_user"
             sequence="60"/>
             <!-- Base/Configuration/Configuration/Professional/Categories -->
-<!--             <menuitem name="Categories" id="menu_base_config_config_professional_categories" 
+            <menuitem name="Categories" id="menu_base_config_config_professional_categories" 
                 parent="menu_base_config_config_professional"
                 groups="clv_base.group_professional_user"
                 sequence="10"
                 action="clv_professional.act_open_clv_professional_category_view"/>
- -->            <!-- Base/Configuration/Configuration/Professional/Specialties -->
+            <!-- Base/Configuration/Configuration/Professional/Specialties -->
 <!--             <menuitem name="Specialties" id="menu_base_config_config_professional_specialty" 
                 parent="menu_base_config_config_professional"
                 groups="clv_base.group_professional_user"
