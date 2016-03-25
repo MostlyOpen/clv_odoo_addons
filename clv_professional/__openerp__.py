@@ -36,6 +36,7 @@
         'security/clv_professional_security.xml',
         'security/ir.model.access.csv',
         'clv_professional_view.xml',
+        'category/clv_professional_category_view.xml',
         # 'specialty/clv_professional_specialty_view.xml',
         # 'category/clv_professional_category_view.xml',
         # 'tag/clv_tag_view.xml',
