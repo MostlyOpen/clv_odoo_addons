@@ -17,44 +17,4 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
-{
-    'name': 'Professional',
-    'summary': 'Professional Module used in CLVsol Solutions.',
-    'version': '2.0',
-    'author': 'Carlos Eduardo Vercelino - CLVsol',
-    'category': 'Generic Modules/Others',
-    'license': 'AGPL-3',
-    'website': 'http://clvsol.com',
-    'images': [],
-    'depends': [
-        'clv_base',
-        'clv_tag',
-        # 'clv_annotation',
-        # 'clv_address',
-        ],
-    'data': [
-        'security/clv_professional_security.xml',
-        'security/ir.model.access.csv',
-        'clv_professional_view.xml',
-        'category/clv_professional_category_view.xml',
-        # 'specialty/clv_professional_specialty_view.xml',
-        'tag/clv_tag_view.xml',
-        # 'annotation/clv_annotation_view.xml',
-        # 'seq/clv_professional_sequence.xml',
-        # 'seq/clv_professional_category_sequence.xml',
-        # 'seq/clv_professional_specialty_sequence.xml',
-        # 'wkf/clv_professional_workflow.xml',
-        # 'wkf/clv_professional_wkf_view.xml',
-        # 'history/clv_professional_history_view.xml',
-        'menu/clv_professional_menu_view.xml',
-        ],
-    'demo': [],
-    'test': [],
-    'init_xml': [],
-    'test': [],
-    'update_xml': [],
-    'installable': True,
-    'application': False,
-    'active': False,
-    'css': [],
-}
+import clv_tag

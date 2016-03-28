@@ -20,7 +20,7 @@
 import clv_professional
 import category
 # import specialty
-# import clv_tag
+import tag
 # import clv_annotation
 # import seq
 # import wkf
