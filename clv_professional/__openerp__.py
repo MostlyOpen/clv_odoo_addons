@@ -28,7 +28,7 @@
     'images': [],
     'depends': [
         'clv_base',
-        # 'clv_tag',
+        'clv_tag',
         # 'clv_annotation',
         # 'clv_address',
         ],
@@ -38,8 +38,7 @@
         'clv_professional_view.xml',
         'category/clv_professional_category_view.xml',
         # 'specialty/clv_professional_specialty_view.xml',
-        # 'category/clv_professional_category_view.xml',
-        # 'tag/clv_tag_view.xml',
+        'tag/clv_tag_view.xml',
         # 'annotation/clv_annotation_view.xml',
         # 'seq/clv_professional_sequence.xml',
         # 'seq/clv_professional_category_sequence.xml',

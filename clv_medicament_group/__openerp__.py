@@ -30,7 +30,7 @@
         'clv_base',
         # 'clv_tag',
         # 'clv_annotation',
-        # 'clv_medicament',
+        'clv_medicament',
         ],
     'data': [
         'security/clv_medicament_group_security.xml',

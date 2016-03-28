@@ -17,4 +17,28 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
-import clv_professional_category
+from openerp import models, fields
+
+
+class Tag(models.Model):
+    _inherit = 'clv_tag'
+
+    professional_ids = fields.Many2many(
+        'clv_professional',
+        'clv_professional_tag_rel',
+        'tag_id',
+        'professional_id',
+        'Professionals'
+        )
+
+
+class Professional(models.Model):
+    _inherit = 'clv_professional'
+
+    tag_ids = fields.Many2many(
+        'clv_tag',
+        'clv_professional_tag_rel',
+        'professional_id',
+        'tag_id',
+        'Tags'
+        )
