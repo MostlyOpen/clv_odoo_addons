@@ -73,13 +73,20 @@ class MedicamentModel(models.AbstractModel):
     pres_quantity_unit = fields.Many2one('clv_medicament.uom', string='Quantity Unit',
                                          help='Unit of measure for the medicament to be taken')
     notes = fields.Text(string='Notes')
-    date_inclusion = fields.Datetime("Inclusion Date", required=False, readonly=False)
+    date_inclusion = fields.Datetime("Inclusion Date", required=False, readonly=False,
+                                     default=lambda *a: datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     active = fields.Boolean('Active',
-                            help="The active field allows you to hide the medicament without removing it.")
+                            help="The active field allows you to hide the medicament without removing it.",
+                            default=True)
     is_product = fields.Boolean('Is a Product',
-                                help="Check if the medicament is a product.")
+                                help="Check if the medicament is a product.",
+                                default=False)
     is_fraction = fields.Boolean('Is a Fraction',
-                                 help="Check if the medicament is a fraction of a product.")
+                                 help="Check if the medicament is a fraction of a product.",
+                                 default=False)
+    for_hospital_use = fields.Boolean('For Hospital Use',
+                                      help="Check if for hospital use only.",
+                                      default=False)
 
     _order = 'name'
 
@@ -87,13 +94,6 @@ class MedicamentModel(models.AbstractModel):
         ('name_uniq', 'unique(name)', u'Error! The Medicament Name must be unique!'),
         ('code_uniq', 'unique(code)', u'Error! The Medicament Code must be unique!'),
         ]
-
-    _defaults = {
-        'active': 1,
-        'is_product': False,
-        'is_fraction': False,
-        'date_inclusion': lambda *a: datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-        }
 
     def _check_ean_key(self, cr, uid, ids, context=None):
         for medicament in self.read(cr, uid, ids, ['ean13'], context=context):

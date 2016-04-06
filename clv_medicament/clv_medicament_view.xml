@@ -50,6 +50,7 @@
                                     <group>
                                         <field name="is_product"/>
                                         <field name="is_fraction"/>
+                                        <field name="for_hospital_use"/>
                                         <field name="ean13"/>
                                     </group>
                                     <group string="Status">
@@ -84,6 +85,7 @@
                     <field name="code"/>
                     <field name="is_product"/>
                     <field name="is_fraction"/>
+                    <field name="for_hospital_use"/>
                     <field name="notes"/>
                     <field name="ean13"/>
                 </tree>
@@ -109,6 +111,8 @@
                     <filter string="Product" name="product" domain="[('is_product','=',1)]"/>
                     <filter string="Not a Fraction" name="not_fraction" domain="[('is_fraction','=',0)]"/>
                     <filter string="Fraction" name="fraction" domain="[('is_fraction','=',1)]"/>
+                    <filter string="Not For Hospital Use" name="not_for_hospital_use" domain="[('for_hospital_use','=',0)]"/>
+                    <filter string="For Hospital Use" name="for_hospital_use" domain="[('for_hospital_use','=',1)]"/>
                     <filter string="Missing Medicament Code" name="product" domain="[('code','=',False)]"/>
                     <filter string="Missing Active Component" name="missing_active_component" domain="[('active_component','=',False)]"/>
                     <filter string="Missing Manufacturer" name="missing_manufacturer" domain="[('manufacturer','=',False)]"/>
