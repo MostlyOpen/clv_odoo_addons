@@ -30,8 +30,7 @@
         ],
     'data': [
         'security/clv_residence_security.xml',
-        # 'security/ir.model.access.csv',
-        'clv_residence_view.xml',
+        'clv_address_view.xml',
         'menu/clv_residence_menu_view.xml',
         ],
     'demo': [],
