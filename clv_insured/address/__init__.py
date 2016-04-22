@@ -18,6 +18,4 @@
 #
 ###############################################################################
 
-import clv_insured
-import category
-import address
+import clv_address
