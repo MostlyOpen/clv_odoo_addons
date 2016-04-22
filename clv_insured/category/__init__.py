@@ -18,5 +18,4 @@
 #
 ###############################################################################
 
-import clv_insured
-import category
+import clv_insured_category
