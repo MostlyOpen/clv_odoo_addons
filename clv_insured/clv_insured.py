@@ -69,10 +69,3 @@ class clv_insured(models.Model):
             self.age = str(delta.years) + 'y ' + str(delta.months) + 'm ' + str(delta.days) + 'd'
         else:
             self.age = "No Date of Birth!"
-
-    def onchange_address_id(self, cr, uid, ids, address, context=None):
-        if address:
-            # address = self.pool.get('res.partner').browse(cr, uid, address, context=context)
-            address = self.pool.get('clv_address').browse(cr, uid, address, context=context)
-            return {'value': {'work_phone': address.phone, 'mobile_phone': address.mobile, 'work_email': address.email}}
-        return {'value': {}}
