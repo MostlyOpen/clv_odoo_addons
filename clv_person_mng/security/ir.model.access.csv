@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_clv_person_mng_person_mng_user,clv_person_mng,model_clv_person_mng,clv_base.group_person_mng_user,1,0,0,0
+access_clv_person_mng_person_mng_manager,clv_person_mng,model_clv_person_mng,clv_base.group_person_mng_manager,1,1,1,0
+access_clv_person_mng_smanager,clv_person_mng,model_clv_person_mng,clv_base.group_smanager,1,1,1,1

@@ -18,28 +18,4 @@
 #
 ###############################################################################
 
-from openerp import models, fields
-
-
-class File(models.Model):
-    _inherit = 'clv_file'
-
-    annotation_ids = fields.Many2many(
-        'clv_annotation',
-        'clv_file_annotation_rel',
-        'file_id',
-        'annotation_id',
-        'Annotations'
-    )
-
-
-class Annotation(models.Model):
-    _inherit = 'clv_annotation'
-
-    file_ids = fields.Many2many(
-        'clv_file',
-        'clv_file_annotation_rel',
-        'annotation_id',
-        'file_id',
-        'Files'
-    )
+import clv_person_mng
