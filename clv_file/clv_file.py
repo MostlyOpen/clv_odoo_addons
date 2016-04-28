@@ -37,9 +37,6 @@ class File(models.Model):
                             help="If unchecked, it will allow you to hide the file without removing it.",
                             default=1)
     url = fields.Char('URL', size=256, help="URL of the File")
-    ct_url = fields.Char('Connected Text URL',
-                         size=256,
-                         help="Connected Text URL of the File")
     parent_id = fields.Many2one('clv_file', 'Parent File')
     child_ids = fields.One2many('clv_file', 'parent_id', 'Child Files')
 
@@ -51,6 +48,6 @@ class File(models.Model):
     def _compute_path_str(self):
         if self.code:
             if self.alias:
-                self.path = self.alias + '_' + self.code + '_'
+                self.path = self.alias
             else:
-                self.path = '_' + self.code + '_'
+                self.path = self.code

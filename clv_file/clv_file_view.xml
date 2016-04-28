@@ -40,8 +40,7 @@
                                     <group>
                                         <field name="date_inclusion"/>
                                         <field name="parent_id"/>
-                                        <field name="url" widget="url" placeholder="e.g. www.openerp.com"/>
-                                        <field name="ct_url" widget="url"/>
+                                        <field name="url" widget="url" placeholder="e.g. http://clvsol.com"/>
                                     </group>
                                     <group>
                                         <field name="description" nolabel="1" placeholder="Description..."/>
