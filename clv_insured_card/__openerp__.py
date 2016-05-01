@@ -31,7 +31,7 @@
         'clv_base',
         # 'clv_tag',
         # 'clv_annotation',
-        # 'clv_insured',
+        'clv_insured',
         # 'clv_batch',
     ],
     'data': [
@@ -46,7 +46,7 @@
         # 'wkf/clv_insured_card_workflow.xml',
         # 'wkf/clv_insured_card_wkf_view.xml',
         # 'history/clv_insured_card_history_view.xml',
-        # 'clv_insured/clv_insured_view.xml',
+        'insured/clv_insured_view.xml',
         # 'clv_insured_card_batch/clv_insured_card_batch_view.xml',
         'menu/clv_insured_card_menu_view.xml',
     ],

@@ -18,5 +18,18 @@
 #
 ###############################################################################
 
-import clv_insured_card
-import insured
+from openerp import models, fields
+
+
+class InsuredCard(models.Model):
+    _inherit = 'clv_insured_card'
+
+    insured_id = fields.Many2one('clv_insured', 'Insured')
+
+
+class Insured(models.Model):
+    _inherit = 'clv_insured'
+
+    insured_card_ids = fields.One2many('clv_insured_card',
+                                       'insured_id',
+                                       'Insured Cards')
