@@ -27,15 +27,15 @@
                     groups="clv_base.group_manager"
                     sequence="10" />
                     <!-- Insurance/Configuration/Configuration/Insured -->
-                    <menuitem name="Insured" id="menu_insurance_config_config_insured"  
+<!--                     <menuitem name="Insured" id="menu_insurance_config_config_insured"  
                         parent="menu_insurance_config_config"
                         groups="clv_base.group_manager"
                         sequence="10" />
-                    <!-- Insurance/Configuration/Configuration/Insurance -->
-                    <menuitem name="Insurance" id="menu_insurance_config_config_insurance"  
+ -->                    <!-- Insurance/Configuration/Configuration/Insurance -->
+<!--                     <menuitem name="Insurance" id="menu_insurance_config_config_insurance"  
                         parent="menu_insurance_config_config"
                         groups="clv_base.group_manager"
                         sequence="20" />
-
+ -->
     </data>
 </openerp>
