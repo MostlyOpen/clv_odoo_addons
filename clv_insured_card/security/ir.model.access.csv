@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_clv_insured_card_insured_card_user,clv_insured_card,model_clv_insured_card,clv_base.group_insured_card_user,1,0,0,0
+access_clv_insured_card_insured_card_manager,clv_insured_card,model_clv_insured_card,clv_base.group_insured_card_manager,1,1,1,0
+access_clv_insured_card_smanager,clv_insured_card,model_clv_insured_card,clv_base.group_smanager,1,1,1,1
