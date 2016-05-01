@@ -9,9 +9,9 @@
             sequence="10"
             action="clv_insured.act_open_clv_insured_view"/>
 
-        <!-- Insurance/Configuration/Configuration/Insured/Categories -->
+        <!-- Insurance/Configuration/Configuration/Insured Categories -->
         <menuitem name="Insured Categories" id="menu_insurance_config_config_insured_insured_categories" 
-            parent="clv_base.menu_insurance_config_config_insured"
+            parent="clv_base.menu_insurance_config_config"
             groups="clv_base.group_insured_user"
             sequence="10"
             action="clv_insured.act_open_clv_insured_category_view"/>
