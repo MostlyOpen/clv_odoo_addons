@@ -38,7 +38,7 @@
         'security/clv_insured_card_security.xml',
         'security/ir.model.access.csv',
         'clv_insured_card_view.xml',
-        # 'category/clv_insured_card_category_view.xml',
+        'category/clv_insured_card_category_view.xml',
         # 'tag/clv_tag_view.xml',
         # 'annotation/clv_annotation_view.xml',
         # 'seq/clv_insured_card_sequence.xml',

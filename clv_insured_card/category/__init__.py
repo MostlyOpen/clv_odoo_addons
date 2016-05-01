@@ -18,6 +18,4 @@
 #
 ###############################################################################
 
-import clv_insured_card
-import category
-import insured
+import clv_insured_card_category
