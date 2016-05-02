@@ -19,12 +19,12 @@
             sequence="10"
             action="action_clv_todo_task"/>
 
-<!--         <menuitem name="Todo Task Categories" id="menu_todo_task_main_todo_task_categories" 
+        <menuitem name="To-Do Task Categories" id="menu_todo_task_main_todo_task_categories" 
             parent="menu_todo_task_main"
             groups="base.group_user"
             sequence="20"
             action="clv_todo.act_open_clv_todo_task_category_view"/>
- -->
+
 <!--         <menuitem name="To-Do Stages" id="menu_todo_task_main_task_stage"
             parent="menu_todo_task_main"
             groups="base.group_user"

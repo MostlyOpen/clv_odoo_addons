@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ###############################################################################
 #
-# Copyright (C) 2013-Today  Carlos Eduardo Vercelino - CLVsol
+# Copyright (C) 2016-Today  Carlos Eduardo Vercelino - CLVsol
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -34,7 +34,7 @@
         'clv_todo_task_view.xml',
         'security/ir.model.access.csv',
         # 'security/clv_todo_task_access_rules.xml',
-        # 'category/clv_todo_category_view.xml',
+        'category/clv_todo_category_view.xml',
         # 'stage/clv_todo_task_stage_view.xml',
         # 'wizard/clv_todo_wizard_view.xml',
         # 'kanban/clv_todo_task_report.xml',

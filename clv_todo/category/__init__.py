@@ -18,8 +18,4 @@
 #
 ###############################################################################
 
-from . import clv_todo_task
-from . import category
-# from . import stage
-# from . import wizard
-# from . import kanban
+import clv_todo_category
