@@ -36,7 +36,7 @@
         # 'security/clv_todo_task_access_rules.xml',
         'category/clv_todo_category_view.xml',
         'stage/clv_todo_task_stage_view.xml',
-        # 'wizard/clv_todo_wizard_view.xml',
+        'wizard/clv_todo_wizard_view.xml',
         # 'kanban/clv_todo_task_report.xml',
         # # 'kanban/clv_todo_task_view_vignette.xml',
         # 'kanban/clv_todo_task_view.xml',
