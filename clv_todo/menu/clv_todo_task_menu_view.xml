@@ -25,11 +25,11 @@
             sequence="20"
             action="clv_todo.act_open_clv_todo_task_category_view"/>
 
-<!--         <menuitem name="To-Do Stages" id="menu_todo_task_main_task_stage"
+        <menuitem name="To-Do Stages" id="menu_todo_task_main_task_stage"
             parent="menu_todo_task_main"
             groups="base.group_user"
             sequence="30"
             action="clv_todo.action_clv_todo_task_stage"/>
- -->
+
     </data>
 </openerp>
