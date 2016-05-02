@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Mail/Messaging/My To-Do -->
+<!--         <menuitem name="My To-Do" id="menu_clv_todo_task"
+            parent="mail.mail_feeds"
+            groups="base.group_user"
+            sequence="20"
+            action="action_clv_todo_task"/>
+
+ -->        <!-- Menu Items -->
+        <menuitem id="menu_todo_task_main"
+            name="To-Do" parent="mail.mail_my_stuff"/>
+
+        <menuitem name="To-Do Tasks" id="menu_clv_todo_task"
+            parent="menu_todo_task_main"
+            groups="base.group_user"
+            sequence="10"
+            action="action_clv_todo_task"/>
+
+        <menuitem name="To-Do Task Categories" id="menu_todo_task_main_todo_task_categories" 
+            parent="menu_todo_task_main"
+            groups="base.group_user"
+            sequence="20"
+            action="clv_todo.act_open_clv_todo_task_category_view"/>
+
+        <menuitem name="To-Do Stages" id="menu_todo_task_main_task_stage"
+            parent="menu_todo_task_main"
+            groups="base.group_user"
+            sequence="30"
+            action="clv_todo.action_clv_todo_task_stage"/>
+
+    </data>
+</openerp>
