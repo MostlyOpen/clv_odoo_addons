@@ -115,12 +115,18 @@
             </field>
         </record>
         
-        <record id="view_clv_medicament_list_versionform_item" model="ir.ui.view">
+        <record id="view_clv_medicament_list_version_form_item" model="ir.ui.view">
             <field name="name">clv_medicament_list.version.form</field>
             <field name="model">clv_medicament_list.version</field>
             <field name="inherit_id" ref="view_clv_medicament_list_version_form"/>
             <field name="priority" eval="8" />
             <field name="arch" type="xml">
+                <label for="description" position="before">
+                    <label for="count_items"/>
+                    <h3>
+                        <field name="count_items"/>
+                    </h3>
+                </label>
                 <page string="Settings" position="before">
                     <page string="Medicament List Itens">
                         <group>
@@ -128,6 +134,18 @@
                         </group>
                     </page>
                 </page>
+            </field>
+        </record>
+
+        <record id="view_clv_medicament_list_version_tree_item" model="ir.ui.view">
+            <field name="name">clv_medicament_list.version.tree</field>
+            <field name="model">clv_medicament_list.version</field>
+            <field name="inherit_id" ref="view_clv_medicament_list_version_tree"/>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <field name="code" position="after">
+                    <field name="count_items"/>
+                </field>
             </field>
         </record>
 
