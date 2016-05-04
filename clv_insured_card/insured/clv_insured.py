@@ -25,6 +25,9 @@ class InsuredCard(models.Model):
     _inherit = 'clv_insured_card'
 
     insured_id = fields.Many2one('clv_insured', 'Insured')
+    insured_code = fields.Char('Insured Code', related='insured_id.code')
+    insured_birthday = fields.Date('Insured Date of Birth', related='insured_id.birthday')
+    insured_age = fields.Char('Insured Age', related='insured_id.age')
 
 
 class Insured(models.Model):

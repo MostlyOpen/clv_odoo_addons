@@ -26,7 +26,7 @@ class InsuredCard(models.Model):
     _name = 'clv_insured_card'
 
     name = fields.Char('Printed Name', required=True, size=64, help='Name printed on the card.')
-    code = fields.Char(size=64, string='Insured Code')
+    code = fields.Char(size=64, string='Insured Card Code')
     notes = fields.Text(string='Notes')
     date_inclusion = fields.Datetime("Inclusion Date", required=False, readonly=False,
                                      default=lambda *a: datetime.now().strftime('%Y-%m-%d %H:%M:%S'))

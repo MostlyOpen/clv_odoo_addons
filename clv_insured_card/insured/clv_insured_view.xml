@@ -13,6 +13,18 @@
                     <h3>
                         <field name="insured_id" placeholder="Insured..." options="{'no_open': False, 'no_create': True}"/>
                     </h3>
+                    <label for="insured_code"/>
+                    <h3>
+                        <field name="insured_code" readonly="True"/>
+                    </h3>
+                    <label for="insured_birthday"/>
+                    <h3>
+                        <field name="insured_birthday" readonly="True"/>
+                    </h3>
+                    <label for="insured_age"/>
+                    <h3>
+                        <field name="insured_age"/>
+                    </h3>
                 </div>
             </field>
         </record>
@@ -25,6 +37,9 @@
             <field name="arch" type="xml">
                 <field name="code" position="after">
                     <field name="insured_id" />
+                    <field name="insured_code"/>
+                    <field name="insured_birthday"/>
+                    <field name="insured_age"/>
                 </field>
             </field>
         </record>
@@ -37,6 +52,9 @@
             <field name="arch" type="xml">
                 <field name="code" position="after">
                     <field name="insured_id" />
+                    <field name="insured_code"/>
+                    <field name="insured_birthday"/>
+                    <field name="insured_age"/>
                 </field>
                 <group string="Group By..." position="inside">
                     <filter string="Insured" domain="[]" context="{'group_by': 'insured_id'}"/>
