@@ -1,21 +1,22 @@
-# -*- encoding: utf-8 -*-
-################################################################################
-#                                                                              #
-# Copyright (C) 2013-Today  Carlos Eduardo Vercelino - CLVsol                  #
-#                                                                              #
-# This program is free software: you can redistribute it and/or modify         #
-# it under the terms of the GNU Affero General Public License as published by  #
-# the Free Software Foundation, either version 3 of the License, or            #
-# (at your option) any later version.                                          #
-#                                                                              #
-# This program is distributed in the hope that it will be useful,              #
-# but WITHOUT ANY WARRANTY; without even the implied warranty of               #
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                #
-# GNU Affero General Public License for more details.                          #
-#                                                                              #
-# You should have received a copy of the GNU Affero General Public License     #
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
-################################################################################
+# -*- coding: utf-8 -*-
+###############################################################################
+#
+# Copyright (C) 2013-Today  Carlos Eduardo Vercelino - CLVsol
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+###############################################################################
 
 from openerp import models, fields
 from datetime import datetime
@@ -70,7 +71,7 @@ class MedicamentModel(models.AbstractModel):
     pres_form = fields.Many2one('clv_medicament.form', string='Presentation Form',
                                 help='Medicament form, such as tablet or gel')
     pres_quantity = fields.Float(string='Presentation Quantity')
-    pres_quantity_unit = fields.Many2one('clv_medicament.uom', string='Quantity Unit',
+    pres_quantity_unit = fields.Many2one('clv_medicament.uom', string='Presentation Quantity Unit',
                                          help='Unit of measure for the medicament to be taken')
     notes = fields.Text(string='Notes')
     date_inclusion = fields.Datetime("Inclusion Date", required=False, readonly=False,
@@ -93,7 +94,7 @@ class MedicamentModel(models.AbstractModel):
     _sql_constraints = [
         ('name_uniq', 'unique(name)', u'Error! The Medicament Name must be unique!'),
         ('code_uniq', 'unique(code)', u'Error! The Medicament Code must be unique!'),
-        ]
+    ]
 
     def _check_ean_key(self, cr, uid, ids, context=None):
         for medicament in self.read(cr, uid, ids, ['ean13'], context=context):
