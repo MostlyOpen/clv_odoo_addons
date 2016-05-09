@@ -30,7 +30,7 @@
     'depends': [
         'clv_base',
         'clv_tag',
-        # 'clv_annotation',
+        'clv_annotation',
         # 'clv_person',
         # 'clv_family',
         # 'hr',
@@ -41,7 +41,7 @@
         'clv_community_view.xml',
         'category/clv_community_category_view.xml',
         'tag/clv_tag_view.xml',
-        # 'annotation/clv_annotation_view.xml',
+        'annotation/clv_annotation_view.xml',
         # 'seq/clv_community_sequence.xml',
         # 'seq/clv_community_category_sequence.xml',
         # 'wkf/clv_community_workflow.xml',
