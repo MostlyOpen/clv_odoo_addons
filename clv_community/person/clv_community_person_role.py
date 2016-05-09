@@ -18,13 +18,21 @@
 #
 ###############################################################################
 
-import clv_community
-import category
-import tag
-import annotation
-import person
-# import seq
-# import wkf
-# import history
-# import family
-# import hr_employee
+from openerp import models, fields
+
+
+class CommunityPersonRole(models.Model):
+    _name = 'clv_community.person_role'
+
+    name = fields.Char(size=256,
+                       string='Community Person Role', required=True,
+                       help='Role of a Person in an Community')
+    description = fields.Text(string='Description')
+    notes = fields.Text(string='Notes')
+    active = fields.Boolean('Active',
+                            help="If unchecked, it will allow you to hide the person role without removing it.",
+                            default=1)
+    _order = 'name'
+
+    _sql_constraints = [('role_name_uniq', 'unique(name)',
+                         u'Error! The Person Role Name must be unique!')]

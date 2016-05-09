@@ -18,13 +18,5 @@
 #
 ###############################################################################
 
-import clv_community
-import category
-import tag
-import annotation
-import person
-# import seq
-# import wkf
-# import history
-# import family
-# import hr_employee
+import clv_community_person_role
+import clv_community_person

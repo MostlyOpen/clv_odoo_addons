@@ -4,12 +4,12 @@
 
         <!-- Community -->
         <!--menuitem name="Community" id="menu_commutity" 
-            groups="clv_base.group_base_user"
+            groups="clv_base.group_user"
             sequence="13"/-->
             <!-- Community/Community -->
             <!--menuitem name="Community" id="menu_community_community"  
                 parent="menu_commutity"
-                groups="clv_base.group_base_user"
+                groups="clv_base.group_user"
                 sequence="10"/-->
                 <!-- Community/Community/Communities -->
                 <menuitem name="Communities" id="menu_community_community_communities"
@@ -24,12 +24,12 @@
                         sequence="10"
                         action="clv_community.act_open_clv_community_family_view"/>
  -->                    <!-- Community/Community/Community/Persons -->
-<!--                     <menuitem name="Persons" id="menu_community_community_communities_persons"
+                    <menuitem name="Persons" id="menu_community_community_communities_persons"
                         parent="menu_community_community_communities"
                         groups="clv_base.group_community_user"
                         sequence="20"
                         action="clv_community.act_open_clv_community_person_view"/>
- -->                    <!-- Community/Community/Community/Employees -->
+                    <!-- Community/Community/Community/Employees -->
 <!--                     <menuitem name="Employees" id="menu_community_community_communities_employees"
                         parent="menu_community_community_communities"
                         groups="clv_base.group_community_user"
@@ -38,7 +38,7 @@
  -->                <!-- Community/Community/Configuration -->
                 <!--menuitem name="Configuration" id="menu_community_community_config"  
                     parent="menu_community_community"
-                    groups="clv_base.group_base_manager"
+                    groups="clv_base.group_manager"
                     sequence="90"/-->
                 <!-- Community/Community/Configuration/Community -->
                 <menuitem name="Community" id="menu_community_community_config_community"
@@ -54,19 +54,19 @@
                     <!-- Community/Community/Configuration/Community/Family Roles -->
 <!--                     <menuitem name="Family Roles" id="menu_community_community_config_community_family_roles"
                         parent="menu_community_community_config_community"
-                        groups="clv_base.group_base_manager"
+                        groups="clv_base.group_manager"
                         sequence="20"
                         action="clv_community.act_open_clv_community_family_role_view"/>
  -->                    <!-- Community/Community/Configuration/Community/Person Roles -->
-<!--                     <menuitem name="Person Roles" id="menu_community_community_config_community_person_roles"
+                    <menuitem name="Person Roles" id="menu_community_community_config_community_person_roles"
                         parent="menu_community_community_config_community"
-                        groups="clv_base.group_base_manager"
+                        groups="clv_base.group_manager"
                         sequence="30"
                         action="clv_community.act_open_clv_community_person_role_view"/>
- -->                    <!-- Community/Community/Configuration/Community/Employee Roles -->
+                    <!-- Community/Community/Configuration/Community/Employee Roles -->
 <!--                     <menuitem name="Employee Roles" id="menu_community_community_config_community_employee_roles"
                         parent="menu_community_community_config_community"
-                        groups="clv_base.group_base_manager"
+                        groups="clv_base.group_manager"
                         sequence="40"
                         action="clv_community.act_open_clv_community_employee_role_view"/>
  -->
