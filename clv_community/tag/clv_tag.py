@@ -18,13 +18,28 @@
 #
 ###############################################################################
 
-import clv_community
-import category
-import tag
-# import annotation
-# import seq
-# import wkf
-# import history
-# import person
-# import family
-# import hr_employee
+from openerp import models, fields
+
+
+class Tag(models.Model):
+    _inherit = 'clv_tag'
+
+    community_ids = fields.Many2many(
+        'clv_community',
+        'clv_community_tag_rel',
+        'tag_id',
+        'community_id',
+        'Communities'
+    )
+
+
+class Community(models.Model):
+    _inherit = 'clv_community'
+
+    tag_ids = fields.Many2many(
+        'clv_tag',
+        'clv_community_tag_rel',
+        'community_id',
+        'tag_id',
+        'Tags'
+    )
