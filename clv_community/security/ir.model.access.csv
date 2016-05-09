@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_clv_community_community_user,clv_community,model_clv_community,clv_base.group_community_user,1,0,0,0
+access_clv_community_community_manager,clv_community,model_clv_community,clv_base.group_community_manager,1,1,1,0
+access_clv_community_smanager,clv_community,model_clv_community,clv_base.group_smanager,1,1,1,1
