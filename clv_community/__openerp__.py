@@ -39,7 +39,7 @@
         'security/clv_community_security.xml',
         'security/ir.model.access.csv',
         'clv_community_view.xml',
-        # 'category/clv_community_category_view.xml',
+        'category/clv_community_category_view.xml',
         # 'tag/clv_tag_view.xml',
         # 'annotation/clv_annotation_view.xml',
         # 'seq/clv_community_sequence.xml',
