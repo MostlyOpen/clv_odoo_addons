@@ -15,5 +15,13 @@
             <field name="name">Community Category Manager</field>
         </record>
         
+        <record id="clv_base.group_community_person_role_manager" model="res.groups">
+            <field name="name">Community Person Role Manager</field>
+        </record>
+        
+        <record id="clv_base.group_community_person_manager" model="res.groups">
+            <field name="name">Community Person Manager</field>
+        </record>
+        
     </data>
 </openerp>

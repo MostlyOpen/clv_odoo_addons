@@ -41,7 +41,7 @@ class CommunityCategory(models.Model):
         'clv_community_category_rel',
         'category_id',
         'community_id',
-        'Communitys'
+        'Communities'
     )
 
     _sql_constraints = [
