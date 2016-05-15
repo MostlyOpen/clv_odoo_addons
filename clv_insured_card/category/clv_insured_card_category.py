@@ -45,7 +45,7 @@ class InsuredCardCategory(models.Model):
     )
 
     _sql_constraints = [
-        ('uniq_code', 'unique(code)', "Error! The Code must be unique!"),
+        ('uniq_code', 'unique(code)', "Error! The Category Code must be unique!"),
     ]
 
     _constraints = [(

@@ -1,21 +1,22 @@
-# -*- encoding: utf-8 -*-
-################################################################################
-#                                                                              #
-# Copyright (C) 2013-Today  Carlos Eduardo Vercelino - CLVsol                  #
-#                                                                              #
-# This program is free software: you can redistribute it and/or modify         #
-# it under the terms of the GNU Affero General Public License as published by  #
-# the Free Software Foundation, either version 3 of the License, or            #
-# (at your option) any later version.                                          #
-#                                                                              #
-# This program is distributed in the hope that it will be useful,              #
-# but WITHOUT ANY WARRANTY; without even the implied warranty of               #
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                #
-# GNU Affero General Public License for more details.                          #
-#                                                                              #
-# You should have received a copy of the GNU Affero General Public License     #
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
-################################################################################
+# -*- coding: utf-8 -*-
+###############################################################################
+#
+# Copyright (C) 2013-Today  Carlos Eduardo Vercelino - CLVsol
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+###############################################################################
 
 from openerp import models, fields, api
 
@@ -41,17 +42,17 @@ class PersonCategory(models.Model):
         'category_id',
         'person_id',
         'Persons'
-        )
+    )
 
     _sql_constraints = [
-        ('uniq_code', 'unique(code)', "Error! The Code must be unique!"),
-        ]
+        ('uniq_code', 'unique(code)', "Error! The Category Code must be unique!"),
+    ]
 
     _constraints = [(
         models.Model._check_recursion,
         'Error! You can not create recursive categories.',
         ['parent_id']
-        )]
+    )]
 
     _parent_store = True
     _parent_order = 'name'
@@ -109,4 +110,4 @@ class Person(models.Model):
         'person_id',
         'category_id',
         'Categories'
-        )
+    )

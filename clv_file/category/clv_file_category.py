@@ -42,17 +42,17 @@ class FileCategory(models.Model):
         'category_id',
         'file_id',
         'Files'
-        )
+    )
 
     _sql_constraints = [
-        ('uniq_code', 'unique(code)', "Error! The Code must be unique!"),
-        ]
+        ('uniq_code', 'unique(code)', "Error! The Category Code must be unique!"),
+    ]
 
     _constraints = [(
         models.Model._check_recursion,
         'Error! You can not create recursive categories.',
         ['parent_id']
-        )]
+    )]
 
     _parent_store = True
     _parent_order = 'name'
@@ -110,4 +110,4 @@ class File(models.Model):
         'file_id',
         'category_id',
         'Categories'
-        )
+    )
